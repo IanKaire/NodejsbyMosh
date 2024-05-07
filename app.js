@@ -1,14 +1,21 @@
-//Importing via require
-const logFunc = require('./logger');
+//Http Module
+const http = require('http');
 
-logFunc("JavaScript");
+const server = http.createServer();
+const webServer = http.createServer((req, res) => {
+    if(req.url === '/') {
+        res.write("Hello World");
+        res.end();
+    }
+    else if(req.url === '/api/courses'){
+        res.write(JSON.stringify(['Cloud Computing', 'I.T Service Management']));
+        res.end();
+    }
+});
 
+server.on('connection', (socket) => {
+    console.log('New connection...');
+});
 
-//OS Module
-const os = require('os');
-
-let totalmemory = os.totalmem();
-let freememory = os.freemem();
-
-console.log(`Total memory:${totalmemory}`);
-console.log(`Free memory:${freememory}`);
+server.listen(3000);
+webServer.listen(8000);
