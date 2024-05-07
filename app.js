@@ -1,9 +1,3 @@
-//Importing via require
-const logFunc = require('./logger');
-
-logFunc("JavaScript");
-
-
 //OS Module
 const os = require('os');
 
