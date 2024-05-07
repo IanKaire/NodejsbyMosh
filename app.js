@@ -1,8 +1,8 @@
-//OS Module
-const os = require('os');
+//FS Module
+const fs = require('fs');
 
-let totalmemory = os.totalmem();
-let freememory = os.freemem();
+fs.readdir('./', (err, files)=>{
+      if(err) console.log(`Error: ${err}`);
+      else console.log(`Result: ${files}`);
+});
 
-console.log(`Total memory:${totalmemory}`);
-console.log(`Free memory:${freememory}`);
