@@ -1,0 +1,12 @@
+{
+  "name": "first-app",
+  "version": "1.0.0",
+  "description": "An app I am using to learn Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Kaire",
+  "license": "ISC"
+}
